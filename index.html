@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>painting shop</title>
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.green.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&amp;display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container-xxl">
+        <div class="row justify-content-between">
+          <div class="top-bar__content">
+            <div class="top-bar__lang col-5">
+              <div class="select justify-content-start">
+                <select class="form-select select-lang" aria-label="lang">
+                  <option value="1">UKR</option>
+                  <option value="2">ENG</option>
+                </select>
+                <select class="form-select select-currency" aria-label="currency">
+                  <option value="1">HRN ₴</option>
+                  <option value="2">USD $</option>
+                </select>
+              </div>
+            </div>
+            <ul class="d-sm-none d-md-flex top-bar__socials col-2 justify-content-center">
+              <li class="top-bar__socials-item"><a class="top-bar__socials-link" href="#">
+                  <svg class="top-bar__socials-link-img" width="25" height="22" viewbox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="active-link" fill-rule="evenodd" clip-rule="evenodd" d="M0.53125 17.6667V4.33333C0.53125 3.44928 0.882439 2.60143 1.50756 1.97631C2.13268 1.35119 2.98053 1 3.86458 1H20.5313C21.4153 1 22.2632 1.35119 22.8883 1.97631C23.5134 2.60143 23.8646 3.44928 23.8646 4.33333V17.6667C23.8646 18.5507 23.5134 19.3986 22.8883 20.0237C22.2632 20.6488 21.4153 21 20.5313 21H3.86458C2.98053 21 2.13268 20.6488 1.50756 20.0237C0.882439 19.3986 0.53125 18.5507 0.53125 17.6667Z" stroke="#EEEEEE" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path class="active-link" d="M3.8645 6.83325L12.1978 11.8333L20.5312 6.83325" stroke="#EEEEEE" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></a></li>
+              <li class="top-bar__socials-item"><a class="top-bar__socials-link" href="#">
+                  <svg class="top-bar__socials-link-img" width="27" height="26" viewbox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="active-link-fill" d="M26.5313 12.8906C26.5313 10.3412 25.7753 7.84895 24.3589 5.72913C22.9425 3.60931 20.9294 1.95708 18.574 0.981382C16.2186 0.00567915 13.6268 -0.249681 11.1263 0.247592C8.62582 0.744864 6.32893 1.97244 4.52608 3.77508C2.72324 5.57773 1.49542 7.87448 0.997868 10.3749C0.500321 12.8754 0.755396 15.4672 1.73084 17.8227C2.70628 20.1782 4.35829 22.1915 6.47795 23.6081C8.59762 25.0247 11.0897 25.781 13.6392 25.7813L13.6406 25.7814L13.642 25.7813C17.0594 25.777 20.3356 24.4175 22.7519 22.0009C25.1682 19.5843 26.5274 16.308 26.5313 12.8906ZM14.1563 24.7381V15.4688H17.7656C17.9024 15.4688 18.0335 15.4144 18.1302 15.3177C18.2269 15.221 18.2813 15.0899 18.2813 14.9531C18.2813 14.8164 18.2269 14.6852 18.1302 14.5885C18.0335 14.4918 17.9024 14.4375 17.7656 14.4375H14.1563V10.8281C14.157 10.1446 14.4289 9.48928 14.9122 9.00595C15.3955 8.52262 16.0508 8.25076 16.7344 8.25H18.7969C18.9336 8.25 19.0648 8.19568 19.1615 8.09898C19.2582 8.00228 19.3125 7.87113 19.3125 7.73438C19.3125 7.59763 19.2582 7.46648 19.1615 7.36978C19.0648 7.27308 18.9336 7.21876 18.7969 7.21876H16.7344C15.7774 7.21981 14.86 7.60043 14.1833 8.27709C13.5067 8.95374 13.1261 9.87119 13.125 10.8281V14.4375H9.51563C9.37888 14.4375 9.24773 14.4918 9.15103 14.5885C9.05433 14.6852 9.00001 14.8164 9.00001 14.9531C9.00001 15.0899 9.05433 15.221 9.15103 15.3177C9.24773 15.4144 9.37888 15.4688 9.51563 15.4688H13.125V24.738C10.0273 24.6032 7.10557 23.2606 4.98576 20.9977C2.86594 18.7349 1.71664 15.7319 1.78406 12.632C1.85148 9.53207 3.13026 6.58185 5.34646 4.41333C7.56265 2.24481 10.54 1.03048 13.6406 1.03048C16.7413 1.03048 19.7186 2.24481 21.9348 4.41333C24.151 6.58185 25.4298 9.53207 25.4972 12.632C25.5646 15.7319 24.4153 18.7349 22.2955 20.9977C20.1757 23.2606 17.254 24.6032 14.1563 24.738V24.7381Z" fill="#FDFBFB"></path>
+                  </svg></a></li>
+              <li class="top-bar__socials-item"><a class="top-bar__socials-link" href="#">
+                  <svg class="top-bar__socials-link-img" width="25" height="26" viewbox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="active-link-fill" d="M12.375 7.21875C11.2532 7.21875 10.1566 7.5514 9.22388 8.17463C8.29114 8.79787 7.56416 9.68369 7.13487 10.7201C6.70558 11.7565 6.59326 12.8969 6.81211 13.9972C7.03096 15.0974 7.57115 16.108 8.36438 16.9012C9.1576 17.6945 10.1682 18.2347 11.2685 18.4535C12.3687 18.6724 13.5091 18.56 14.5455 18.1308C15.5819 17.7015 16.4678 16.9745 17.091 16.0417C17.7142 15.109 18.0469 14.0124 18.0469 12.8906C18.0452 11.3869 17.4471 9.9452 16.3837 8.88189C15.3204 7.81857 13.8788 7.22046 12.375 7.21875ZM12.375 17.5312C11.4572 17.5312 10.56 17.2591 9.79681 16.7492C9.03366 16.2392 8.43886 15.5145 8.08762 14.6665C7.73638 13.8186 7.64448 12.8855 7.82354 11.9853C8.0026 11.0851 8.44458 10.2582 9.09358 9.60921C9.74259 8.96021 10.5695 8.51823 11.4697 8.33917C12.3699 8.16011 13.3029 8.25201 14.1509 8.60325C14.9989 8.95448 15.7236 9.54928 16.2335 10.3124C16.7435 11.0756 17.0156 11.9728 17.0156 12.8906C17.0143 14.121 16.5249 15.3005 15.6549 16.1705C14.7849 17.0405 13.6054 17.5299 12.375 17.5312ZM18.0469 0.515625H6.70312C4.92596 0.517638 3.22217 1.2245 1.96552 2.48115C0.70888 3.73779 0.00201297 5.44159 0 7.21875V18.5625C0.00201297 20.3397 0.70888 22.0435 1.96552 23.3001C3.22217 24.5567 4.92596 25.2636 6.70312 25.2656H18.0469C19.824 25.2636 21.5278 24.5567 22.7845 23.3001C24.0411 22.0435 24.748 20.3397 24.75 18.5625V7.21875C24.748 5.44159 24.0411 3.73779 22.7845 2.48115C21.5278 1.2245 19.824 0.517638 18.0469 0.515625ZM23.7188 18.5625C23.717 20.0663 23.1189 21.5079 22.0556 22.5712C20.9923 23.6346 19.5506 24.2327 18.0469 24.2344H6.70312C5.19937 24.2327 3.7577 23.6346 2.69439 22.5712C1.63107 21.5079 1.03296 20.0663 1.03125 18.5625V7.21875C1.03296 5.715 1.63107 4.27333 2.69439 3.21001C3.7577 2.1467 5.19937 1.54858 6.70312 1.54688H18.0469C19.5506 1.54858 20.9923 2.1467 22.0556 3.21001C23.1189 4.27333 23.717 5.715 23.7188 7.21875V18.5625ZM20.1094 6.1875C20.1094 6.39146 20.0489 6.59084 19.9356 6.76043C19.8223 6.93002 19.6612 7.0622 19.4728 7.14025C19.2843 7.2183 19.077 7.23873 18.8769 7.19894C18.6769 7.15914 18.4931 7.06093 18.3489 6.9167C18.2047 6.77248 18.1065 6.58873 18.0667 6.38869C18.0269 6.18864 18.0473 5.98129 18.1254 5.79286C18.2034 5.60442 18.3356 5.44336 18.5052 5.33005C18.6748 5.21673 18.8742 5.15625 19.0781 5.15625C19.3515 5.15659 19.6136 5.26535 19.807 5.45867C20.0003 5.652 20.109 5.9141 20.1094 6.1875Z" fill="#FDFBFB"></path>
+                  </svg></a></li>
+            </ul>
+            <div class="top-bar__phone col-md-5 col-sm-8"><a class="phone_link" href="">
+                <svg class="phone-icon" width="33" height="33" viewbox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="phone-icon" d="M22.6875 28.3593C12.7365 28.3593 4.64062 20.2635 4.64062 10.3124C4.64223 8.68194 5.23734 7.10778 6.3148 5.884C7.39226 4.66022 8.87837 3.87053 10.4955 3.66243C10.8278 3.62251 11.164 3.69125 11.4539 3.85837C11.7438 4.0255 11.9718 4.28201 12.1038 4.58953L14.6936 10.6321C14.7944 10.8666 14.8355 11.1223 14.8132 11.3765C14.7909 11.6307 14.706 11.8754 14.566 12.0888L12.4215 15.3656C12.373 15.4383 12.344 15.5223 12.3375 15.6095C12.3309 15.6966 12.347 15.784 12.3842 15.8631C13.4047 17.945 15.0927 19.6254 17.1792 20.6364C17.2588 20.6733 17.3466 20.6889 17.434 20.6817C17.5215 20.6745 17.6056 20.6448 17.6781 20.5954L20.9054 18.4433C21.1193 18.3002 21.3656 18.2129 21.622 18.1893C21.8783 18.1658 22.1364 18.2067 22.3728 18.3085L28.4106 20.8962C28.7179 21.0282 28.9743 21.2562 29.1414 21.546C29.3084 21.8359 29.3772 22.172 29.3374 22.5041C29.1293 24.1213 28.3397 25.6075 27.1159 26.685C25.8922 27.7625 24.318 28.3577 22.6875 28.3593ZM10.6863 4.68182C10.6658 4.6818 10.6453 4.68309 10.625 4.68569C9.25674 4.86183 7.99943 5.53005 7.08792 6.56553C6.17641 7.60102 5.67305 8.93293 5.67188 10.3124C5.67188 19.6949 13.3051 27.3281 22.6875 27.3281C24.067 27.3269 25.399 26.8235 26.4345 25.912C27.4699 25.0004 28.1382 23.7431 28.3143 22.3748C28.3268 22.2647 28.3034 22.1535 28.2475 22.0578C28.1916 21.9621 28.1062 21.8871 28.0041 21.844L21.9667 19.2565C21.8878 19.2226 21.8018 19.2089 21.7163 19.2168C21.6308 19.2246 21.5487 19.2537 21.4773 19.3013L18.2502 21.4534C18.0282 21.602 17.7716 21.6904 17.5052 21.71C17.2389 21.7296 16.972 21.6797 16.7307 21.5652C14.4362 20.4531 12.5798 18.6051 11.4574 16.3156V16.3157C11.3423 16.0759 11.2911 15.8104 11.3088 15.5449C11.3266 15.2794 11.4127 15.0231 11.5588 14.8007L13.7032 11.5242C13.7499 11.453 13.7782 11.3714 13.7856 11.2867C13.7931 11.2019 13.7794 11.1166 13.7458 11.0384L11.1559 4.99584C11.1167 4.90344 11.0514 4.82449 10.9679 4.76869C10.8845 4.71288 10.7866 4.68265 10.6862 4.68169L10.6863 4.68182Z" fill="#EEEEEE"></path>
+                </svg><span> +38 (097) 034 55 55</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="container-xxl">
+        <div class="row align-items-center middle-bar justify-content-between">
+          <div class="col-sm-2 order-2 order-sm-2 col-lg-2 order-lg-1 align-middle justify-content-center d-sm-flex d-lg-block"><a class="logo-link" href="#"> <img src="./img/content/Logo.svg"></a></div>
+          <div class="col-sm-1 order-1 order-sm-1 col-lg-8 order-lg-2 justify-content-start d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Каталог</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Про автора</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#" tabindex="-1">Доставка і оплата</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Відгуки</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Контакти									</a></li>
+                </ul>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu-burger__header"><span></span></div>
+              </button>
+            </nav>
+          </div>
+          <div class="col-sm-2 order-3 order-sm-3 col-lg-2 order-lg-3 d-flex justify-content-end">
+            <div class="cart-block"><img src="./img/icons/ph_shopping-cart-thin.svg">
+              <div class="number-block">
+                <p class="quantity-of-goods">12</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ MAIN BANNER BLOCK BEGIN ----------- //-->
+    <div class="main-banner block-padding">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="h1 d-xs-block d-lg-none">
+             Встигни замовити!</div>
+          <div class="col-xs-12 col-md-5">
+            <div class="pic_name_wrap d-xs-block d-md-none">
+              <p class="new_pic">Нова картина</p>
+              <p class="pic_name">Весна за містом</p>
+            </div>
+            <div class="main-banner_picture-block">
+              <div class="main-banner_picture-wrap zoom"><img class="jloupe main-banner_picture-img" src="./img/content/main_page/mainpic_1x.jpg" alt="bar" srcset="./img/content/main_page/mainpic_2x.jpg 2x">
+                <div class="helper_info d-none d-sm-none d-xs-none d-lg-flex">
+                  <p class="helper_info_text">наведіть на зображення для  збільшення</p><img class="helper_img" src="./img/icons/bytesize_zoom-in.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-7">
+            <div class="main-banner__info">
+              <h1 class="h1 d-none d-sm-none d-xs-none d-lg-block">
+                 Встигни замовити!</h1>
+              <div class="pic_name_wrap d-none d-md-block">
+                <p class="new_pic">Нова картина</p>
+                <p class="pic_name">Весна за містом</p>
+              </div>
+              <div class="middle_info">   
+                <div class="pic_price-wrap">
+                  <p class="pic_price_name medium_text">Ціна:</p>
+                  <p class="pic_price medium_text">699 грн</p>
+                </div>
+                <div class="pic_size-wrap">
+                  <p class="pic_size_name medium_text">Розмір:</p>
+                  <p class="pic_size medium_text">60х90см</p>
+                </div>
+              </div>
+              <div class="btns-wrap"><a class="btn btn_standart" href="#">Детальніше</a><a class="btn btn_dark btn_icon" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a></div>
+              <div class="PB_plot"> 
+                <p class="medium_text plot_name">Сюжет</p>
+                <p class="normal_text plot_info middle_text_cut">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, provident laudantium odio deleniti aliquam, mollitia qui quia dolorum magnam nihil minima quidem exercitationem. Tempora quam earum facilis rem enim cum!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo expedita qui exercitationem quibusdam, officiis, delectus quia culpa non fugiat minima vitae vel repudiandae pariatur dicta distinctio modi sapiente ratione minus!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo expedita qui exercitationem quibusdam, officiis, delectus quia culpa non fugiat minima vitae vel repudiandae pariatur dicta distinctio modi sapiente ratione minus!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ MAIN BANNER BLOCK END ----------- //           -->
+    <!-- ------ CATEGORIES BLOCK BEGIN ----------- //-->
+    <div class="categories">
+      <div class="container-xxl">
+        <h2 class="h2">Картини за рубриками</h2>
+        <div class="row categories-row">
+          <div class="col categories-col">
+            <div class="categories-item"> 
+              <div class="image-wrap"> <img src="./img/content/main_page/mainpic_1x.jpg" alt="bar" srcset="./img/content/main_page/mainpic_2x.jpg 2x"></div>
+              <div class="hover-block"><a class="btn btn_empty category-link" href="#">До розділу</a></div>
+            </div><a class="category-name" href="#">
+               Інтер’єри         </a>
+          </div>
+          <div class="col categories-col">
+            <div class="categories-item"> 
+              <div class="image-wrap"> <img src="./img/pictures/5.jpg" alt="bar" srcset="./img/pictures/5.jpg  2x"></div>
+              <div class="hover-block"><a class="btn btn_empty category-link" href="#">До розділу</a></div>
+            </div><a class="category-name" href="#">
+               Пейзажи</a>
+          </div>
+          <div class="col categories-col">
+            <div class="categories-item"> 
+              <div class="image-wrap"> <img src="./img/pictures/0.jpg" alt="bar" srcset="./img/pictures/0.jpg"></div>
+              <div class="hover-block"><a class="btn btn_empty category-link" href="#">До розділу</a></div>
+            </div><a class="category-name" href="#">
+               Тваринки</a>
+          </div>
+        </div><a class="btn btn_standart" href="#">До   галереї</a>
+      </div>
+    </div>
+    <!-- ------ CATEGORIES BLOCK END ----------- //-->
+    <!-- ------ AVALIABLE PICS BLOCK BEGIN ----------- //-->
+    <div class="avaliable-pics">
+      <div class="container-xxl">
+        <h2 class="h2">Доступні до придбання</h2>
+        <div class="row"></div>
+        <div class="masonry-layout">
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="image-wrap"> <img src="./img/pictures/5.jpg" alt="bar" srcset="./img/pictures/5.jpg  2x"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm			</p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="image-wrap"> <img src="./img/pictures/0.jpg" alt="bar" srcset="./img/pictures/0.jpg"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm			</p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="new-pik-marker">NEW</div>
+                <div class="image-wrap"> <img src="./img/pictures/1.jpg" alt="bar" srcset="./img/pictures/1.jpg"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm			</p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="image-wrap"> <img src="./img/pictures/2.jpg" alt="bar" srcset="./img/pictures/2.jpg"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm			</p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="new-pik-marker">NEW</div>
+                <div class="image-wrap"> <img src="./img/pictures/3.jpg" alt="bar" srcset="./img/pictures/3.jpg"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm</p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-layout__panel">
+            <div class="masonry-layout__panel-content">
+              <div class="gallery-item">
+                <div class="image-wrap"> <img src="./img/pictures/7.png" alt="bar" srcset="./img/pictures/7.png"></div>
+                <div class="hover-block">
+                  <p class="pic-name">Дивовижна картина </p><a class="btn btn_empty gallery-link gallery-link-top" href="#">До розділу</a><a class="btn btn_empty btn_icon gallery-link gallery-link-bottom" href="#"><span class="cart-icon"></span><span class="btn-name"> Додати до кошика</span></a>
+                </div>
+              </div>
+              <div class="info-block d-flex justify-content-between align-items-center">
+                <p class="price medium_text">12390 ues </p>
+                <p class="size normal_text">45 * 45 cm					</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ AVALIABLE PICS BLOCK BEGIN ----------- //-->
+    <!-- ------ AUTHOR BLOCK BEGIN ----------- //-->
+    <div class="author-block">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col col-md-5">
+            <div class="author-photo-wrap"> <img class="author-photo" src="./img/alona.jpg" alt=""></div>
+          </div>
+          <div class="col col-md-6 offset-md-1"> 
+            <p class="quote">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum voluptas reprehenderit aperiam nulla quia, laudantium sed quos magni in harum molestiae modi ullam quae? Itaque in ducimus ex tempora quae!</p>
+            <p class="normal_text">
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptatum similique sequi magnam laborum odit eligendi ab consequatur maxime, mollitia numquam natus esse eum earum nemo ullam. Odio, rerum distinctio.		</p>
+            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quod odio minima tempore consectetur tenetur, earum voluptatum tempora dolore fuga. Maiores sint pariatur expedita consectetur aliquam laudantium quis! Atque, repellat.Repellendus ratione dolores delectus reprehenderit magnam pariatur quibusdam esse saepe corrupti rem, suscipit at quisquam sed itaque rerum unde, dolore blanditiis sapiente eum officia aliquam quaerat. Placeat repellat ex repudiandae.Repellat, ea? Dolorum, iste tenetur accusantium voluptate saepe obcaecati consectetur quod distinctio placeat, ea ut optio ad fugiat quas aut, neque accusamus velit id quibusdam incidunt fuga reprehenderit. Suscipit, enim.Eveniet, reiciendis? Ullam ducimus officia sapiente pariatur enim unde fuga illum sed, adipisci molestiae aut repudiandae quisquam explicabo qui dolor numquam quas commodi laudantium voluptatem necessitatibus provident cupiditate rem repellat.Doloribus beatae deserunt, autem nemo enim omnis rem animi sunt at porro perspiciatis cum magnam repellat et tempore eaque in numquam id corporis placeat? Inventore laborum placeat sed expedita consequuntur.Aliquid, beatae impedit dicta ullam aspernatur reprehenderit reiciendis doloribus iure illum quo mollitia autem? Obcaecati natus illum voluptatem. Nesciunt, nihil vel. Incidunt beatae quas repellat doloremque? Non sint blanditiis facilis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ AUTHOR BLOCK END ----------- //                    -->
+    <!-- ------ CAROUSEL BLOCK BEGIN ----------- //-->
+    <div class="carousel-block">
+      <div class="container-xxl">
+        <h2 class="h2">Фото в інтер'єрі</h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="carousel-wrap">
+        <div class="owl-carousel owl-theme">
+          <div class="owly-item"><img class="owl-lazy" data-src="./img/content/carousel/img1.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img2.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img3.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img1.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img1.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img2.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img3.jpg" alt=""></div>
+          <div class="owly-item"> <img class="owl-lazy" data-src="./img/content/carousel/img1.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ Contacts BLOCK BEGIN ----------- //-->
+    <div class="avaliable-pics">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col col-md-6">
+            <h2 class="h2">Написати повідомлення</h2>
+            <form class="contact-form form" novalidate>
+              <div class="form-floating mb-3">
+                <input class="form-control contact-name" id="floatingName" type="text" pattern="[A-Za-z]{2,50}" required placeholder="Имя">
+                <label for="floatingName">Ваше ім`я</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control contact-mail" id="floatingInput" type="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="name@example.com">
+                <label for="floatingInput">Ваш Email</label>
+              </div>
+              <div class="form-floating mb-5">
+                <textarea class="form-control" id="floatingTextarea2" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Повідомленнz</label>
+              </div>
+              <button class="btn btn btn_standart" type="submit">Відправити		</button>
+            </form>
+          </div>
+          <div class="col col-md-4 offset-md-1">
+            <h2 class="h2">Контакти</h2>
+            <ul class="contacts-list"> 
+              <li class="contacts-item"> <a class="contact-link" href="#"><img src="../img/icons/telegram.svg"><span class="normal-text">@alona_telegram</span></a></li>
+              <li class="contacts-item">		<a class="contact-link" href="#"><img src="../img/icons/fb-icon.svg"><span class="normal-text">@alona_telegram</span></a></li>
+              <li class="contacts-item">		<a class="contact-link margin-50" href="#"><img src="../img/icons/inst-icon.svg"><span class="normal-text">@alona_telegram</span></a></li>
+              <li class="contacts-item">		<a class="contact-link" href="#"><img src="../img/icons/mailicon.svg"><span class="normal-text">@alona_telegram</span></a></li>
+              <li class="contacts-item">		<a class="contact-link" href="#"><img src="../img/icons/ph_phone-thin.svg"><span class="normal-text">+3 8098 098 87 87			</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------ Contacts BLOCK END ----------- //-->
+    <!-- ------ footer BLOCK BEGIN ----------- //-->
+    <footer class="footer">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col col-md-5"><a class="logo-link" href="#"> <img src="./img/content/Logo.svg"></a>
+            <ul class="contacts-list"> 
+              <li class="contacts-item"><a class="contact-link" href="#"><img src="../img/icons/mailicon.svg"><span class="normal-text">@alona_telegram</span></a></li>
+              <li class="contacts-item">		<a class="contact-link" href="#"><img src="../img/icons/ph_phone-thin.svg"><span class="normal-text">+3 8098 098 87 87</span></a></li>
+            </ul>
+            <ul class="contacts-vertical"> 
+              <li class="contacts-vertical-item"><a class="contact-link2" href="#"><img src="../img/icons/telegram.svg"></a></li>
+              <li class="contacts-vertical-item contacts-item">		<a class="contact-link2" href="#"><img src="../img/icons/inst-icon.svg"></a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="navbar-nav-f me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Каталог</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Про автора</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" tabindex="-1">Доставка і оплата</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Відгуки</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="col justyfy-content-right">
+            <div class="footer-info"> 
+              <div class="next-link-wrap"> <a class="next-link" href=""><span>До галереї</span><img src="./img/icons/ArrowLeft.svg"></a></div>
+              <div class="take"> 
+                <p class="normal_text mb-3">Ми приймаємо:</p>
+                <div class="wrp-pay">
+                  <div class="pay-img"> <img src="./img/content/pay-mastercard.png" alt=""></div>
+                  <div class="pay-img"> <img src="./img/content/paypal.png" alt=""></div>
+                  <div class="pay-img"> <img src="./img/content/pay-visa.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="subfooter"> 
+      <div class="container-xxl">
+        <div class="row"> 
+          <p class="copyright">(с)Яворська 2021, всі права захищені</p>
+        </div>
+      </div>
+    </div>
+    <!-- ------ footer BLOCK END ----------- //-->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/main.min.js"></script>
+    <script src="./js/mainForm.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/jquery.jloupe.js"></script>
+  </body>
+</html>
